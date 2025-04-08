@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Moon+Dance&display=swap');
+
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+/* 
+@theme{
+  --breakpoint-sm:700px;
+  --breakpoint-hilo:1300px;
+  --margin-1:100px;
+} */
+
+/* @import tailwindcss/preflight; */
+
+/* @layer base{
+  h1{
+    @apply text-8xl;
+  }
+  h2{
+    @apply text-5xl
+  }
+  button{
+    @apply text-3xl;
+    @apply border-amber-300;
+    @apply bg-red-600;
+    @apply text-white;
+    @apply p-2;
+    @apply m-4;
+    @apply rounded-4xl
+  }
+} */
+
+
+/* We can make our custom css classes and to use them according to our choices.
+  What is the need of custom classes?
+  Bcoz some times we write same code again and again so if we make custom classes then it will not create redundant code and avoid boiler plate code. */
+/* @layer components{
+  .heading-mashallah{
+    @apply text-2xl border-red-700 bg-yellow-400 rounded-4xl p-5 m-5 hover:bg-yellow-500
+  }
+  
+  .btn-primary{
+    @apply text-2xl rounded-2xl text-white bg-green-600 p-3 m-3 hover:bg-green-700
+  }
+} */
+
+
+@layer components{
+  .gallery_css{
+    @apply w-100 border-5 border-red-700 transition duration-1000 hover:border-1 hover:brightness-200 hover:scale-110
+  }
+  .btn{
+    @apply px-5 py-2 rounded border m-1 border-slate-400
+  }
+
+  .btn-primary{
+    @apply bg-blue-500  hover:bg-blue-600 text-white
+  }
+
+  .btn-secondary{
+    @apply bg-slate-500 hover:bg-slate-600 text-white
+  }
+
+  .btn-success{
+    @apply bg-green-600 hover:bg-green-700 text-white
+  }
+
+  .btn-danger{
+    @apply bg-red-400 hover:bg-red-500 text-white
+  }
+
+  .btn-warning{
+    @apply bg-yellow-600 hover:bg-yellow-700 
+  }
+
+  .btn-info{
+    @apply bg-cyan-600 hover:bg-cyan-700  
+  }
+
+  .btn-dark{
+    @apply bg-black text-white 
+  }
+}
+
+@theme {
+  --color-mint-500: oklch(0.72 0.11 178);
+  --font-moonDance: "Moon Dance", "cursive";
+  --font-charm: "Charm", "cursive"
+}
+
+.custom-function {
+  @apply bg-green-500 text-white text-2xl p-4 
+}

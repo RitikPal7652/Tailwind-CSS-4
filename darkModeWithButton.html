@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" id="root" class="dark">
+  <head>
+    <title>Dark Mode With Button in Tailwind css</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <script>
+    function handleMode() {
+      let rootElement = document.getElementById("root");
+      let buttonElement = document.getElementById("buttonHai");
+      let bodyElement = document.getElementById("bodyHai");
+
+      if (rootElement.className == "dark") {
+        document.getElementById("root").className = "light";
+        buttonElement.innerText = "Apply Dark Mode";
+      } else {
+        document.getElementById("root").className = "dark";
+        buttonElement.innerText = "Apply Light Mode";
+      }
+    }
+  </script>
+  <body class="h-screen">
+    <div class="dark:bg-slate-400 h-full">
+      <button
+        id="buttonHai"
+        onclick="handleMode()"
+        class="m-6 p-2 text-2xl bg-slate-200 border border-slate-900 hover:bg-slate-300"
+      >
+        Apply Dark Mode
+      </button>
+      <div class="dark:bg-slate-800">
+        <h1 class="text-7xl dark:text-white">
+          Dark Mode Test with Tailwind css
+        </h1>
+        <p class="text-4xl dark:text-white">Code Step By Step</p>
+      </div>
+
+      <div
+        class="flex gap-15 m-10 p-4 border border-slate-700 dark:bg-slate-600 dark:border-red-600 bg-blue-400"
+      >
+        <div class="bg-blue-300 size-12 dark:bg-black"></div>
+        <p class="text-3xl ml-10 p-2 text-white">Box with Dark Mode</p>
+      </div>
+    </div>
+  </body>
+</html>
